@@ -3,8 +3,8 @@
 This repository contains solutions for various algorithms.
 
 ## Table of Contents
-1. [strings](#strings)
-   1. [Sherlock and the Valid String](#sherlock-and-the-valid-string)
+[strings](./src/main/java/com/mvs/algo/strings)
+- [Sherlock and the Valid String](./src/main/java/com/mvs/algo/strings/SherlockAndTheValidString.java)
 
 
 ### How to Run
