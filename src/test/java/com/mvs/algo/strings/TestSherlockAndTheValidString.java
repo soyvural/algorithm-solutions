@@ -8,30 +8,47 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
 
 class TestSherlockAndTheValidString {
+
+    @ParameterizedTest
+    @NullAndEmptySource
+    @DisplayName("empty input should return YES")
+    void isValid_emptyInput_shouldReturnYES(String input) {
+
+        final String actual = SherlockAndTheValidString.isValid(input);
+
+        assertEquals("YES", actual);
+    }
+
     @ParameterizedTest
     @CsvSource(value = {
-        "a:YES",
-        "ab:YES", 
-        "abc:YES", 
-        "aabbccd:YES", 
-        "abcdefghhgfedecba:YES",
-        "aabbcd:NO",
-        "abcdefghhgfedecb:NO",
-        "aabbccddeefghi:NO",
-        "abcdefghhgfedec:NO",
-        "aabbccddeeffgghhhi:NO",
+            "a",
+            "aa",
+            "aaa",
+            "aabbccdd",
+            "afbcdefcbea",
     }, delimiter = ':')
-    @DisplayName("testIsValidReturnsExpectedResultForGivenInput")
-    void testIsValidReturnsExpectedResultForGivenInput(String input, String expected) {
-        var actual = SherlockAndTheValidString.isValid(input);
+    @DisplayName("string with all characters count same should return YES")
+    void isValid_StringWithAllCharactersCountSame_shouldReturnYES(String input) {
+        final String expected = "YES";
+
+        final String actual = SherlockAndTheValidString.isValid(input);
+
         assertEquals(expected, actual);
     }
 
     @ParameterizedTest
-    @NullAndEmptySource
-    @DisplayName("isBlank_ShouldReturnYESForNullInputs")
-    void isBlank_ShouldReturnYESForNullInputs(String input) {
-        var actual = SherlockAndTheValidString.isValid(input);
-        assertEquals("YES", actual);
+    @CsvSource(value = {
+            "ab",
+            "abbac",
+            "aabbccd",
+            "abcdefghhgfedecba",
+    }, delimiter = ':')
+    @DisplayName("string with one character count different should return YES")
+    void isValid_StringWithOneCharacterCountDifferent_shouldReturnYES(String input) {
+        final String expected = "YES";
+
+        final String actual = SherlockAndTheValidString.isValid(input);
+
+        assertEquals(expected, actual);
     }
 }

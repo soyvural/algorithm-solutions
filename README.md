@@ -5,6 +5,7 @@ This repository contains solutions for various algorithms.
 ## Table of Contents
 [strings](./src/main/java/com/mvs/algo/strings)
 - [Sherlock and the Valid String](./src/main/java/com/mvs/algo/strings/SherlockAndTheValidString.java)
+- [Highest Value Palindrome](./src/main/java/com/mvs/algo/strings/HighestValuePalindrome.java)
 
 
 ### How to Run
