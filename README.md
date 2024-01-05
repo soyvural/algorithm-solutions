@@ -6,6 +6,8 @@ This repository contains solutions for various algorithms.
 [strings](./src/main/java/com/mvs/algo/strings)
 - [Sherlock and the Valid String](./src/main/java/com/mvs/algo/strings/SherlockAndTheValidString.java)
 - [Highest Value Palindrome](./src/main/java/com/mvs/algo/strings/HighestValuePalindrome.java)
+- [Climbing the Leaderboard](./src/main/java/com/mvs/algo/strings/ClimbingLeaderboard.java)
+
 
 
 ### How to Run
